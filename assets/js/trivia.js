@@ -1,15 +1,13 @@
 $(document).ready(function(){
-  $("#start-button").click(function(){
-// ----------------------------------------------------------------
- // declaring the value for the timer to 60 seconds
- // hide the start button and rules
-  	var number = 50;
+  $(".start-button").click(function(){
+    var number = 50;
   	alert("The let game begin!");
-    $("#start-button").on("click", start);  // starts the games 
+    $(".start-button").on("click", start);  // starts the games 
     $("#submit").on("click", finish);  // submits answers and finishes the game
     $("#restart").on("click", restart);  // restarts the games 
-// ----------------------------------------------------------------
-// functions
+
+
+    //Functions
     function start(){
     	counter = setInterval(timer, 1000);
     	showMe(".question");
@@ -31,9 +29,9 @@ $(document).ready(function(){
     	clearInterval(counter); // stops the timer
     	$("#results").show();
     	$("#restart").show();
-		$(".question").hide();
-		$(".showAnswers").hide();
-		$("#submit").hide();
+		    $(".question").hide();
+		    $(".showAnswers").hide();
+		    $("#submit").hide();
     }
     function finish(){
     	number = 1; // if number is equal to 0 number will show -1 so 1 has to be selected
